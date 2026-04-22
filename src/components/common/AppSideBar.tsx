@@ -83,9 +83,9 @@ export function AppSidebar() {
           <SidebarMenuItem>
             {state === "collapsed" ? (
              
-              <SidebarMenuButton size="lg" tooltip="Expand" asChild>
-                <SidebarTrigger  size={"lg"}/>
-              </SidebarMenuButton>
+              
+                <SidebarTrigger  size={"lg"} className="p-0  "/>
+         
             ) : (
             
               <SidebarMenuButton size="lg" asChild>

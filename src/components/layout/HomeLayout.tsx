@@ -1,22 +1,50 @@
-import React from 'react'
-import NavBar from '../NavBar'
-import { Outlet } from 'react-router-dom'
-import Footer from '../Footer'
+import { SidebarProvider, SidebarTrigger, useSidebar } from "@/components/ui/sidebar"
+import { AppSidebar } from "../common/AppSideBar"
+import NavBar from "../common/NavBar"
+import Footer from "../common/Footer"
+import { Outlet } from "react-router-dom"
 
 function HomeLayout() {
+
   return (
-    <div className='flex flex-col min-h-screen'>
-        <NavBar/>
+    <SidebarProvider>
+      <div className="flex min-h-screen w-full">
 
-        <main className='mt-16 overflow-y-auto min-h-full flex-1 '>
-            <Outlet/>
-        </main>
-        
+       
+        <AppSidebar />
 
-        <Footer/>
+      
+        <div className="flex flex-col flex-1">
 
-    </div>
+          <header className="sticky top-0 z-30 h-16 border-b border-border  flex items-center px-4 gap-4  backdrop-blur-md bg-background/50">
+         <TriggerWhenExpanded /> 
+           
+            <NavBar />
+          </header>
+
+      
+          <main className="flex-1 overflow-y-auto p-4 md:p-6">
+            <Outlet />
+          </main>
+
+       
+          <Footer />
+
+        </div>
+      </div>
+    </SidebarProvider>
   )
 }
+
+
+function TriggerWhenExpanded() {
+  const { state } = useSidebar()
+  
+  if (state === "collapsed") return null  
+
+  return <SidebarTrigger size={ "lg"} />
+}
+
+
 
 export default HomeLayout

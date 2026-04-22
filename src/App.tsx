@@ -1,10 +1,12 @@
+import { Import } from "lucide-react";
 import "./App.css";
 import { Button } from "./components/ui/button";
+
 import AppRouter from "./routes/AppRouter";
-  function App() {
+function App() {
   return (
     <>
-     <AppRouter/>
+      <AppRouter />
     </>
   );
 }

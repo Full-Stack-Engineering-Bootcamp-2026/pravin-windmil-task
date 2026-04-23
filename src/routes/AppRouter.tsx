@@ -5,6 +5,7 @@ import ChartPreview from "@/pages/ChartPreview";
 import { ComponentPage } from "@/pages/ComponentPage";
 import DashboardPage from "@/pages/DashboardPreview";
 import Feed from "@/pages/Feed";
+import FormPreview from "@/pages/FormPreview";
 import Home from "@/pages/Home";
 import React from "react";
 
@@ -30,7 +31,7 @@ function AppRouter() {
               />
                <Route
                 path="forms"
-                element={<ComponentPage title="Forms" />}
+                element={<ComponentPage title="Forms" preview = { <FormPreview/>} />}
               />
                 <Route
                 path="cards"

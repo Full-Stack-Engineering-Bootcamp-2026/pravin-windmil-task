@@ -1,6 +1,7 @@
 import HomeLayout from "@/components/layout/HomeLayout";
 import UpcomingFeature from "@/components/UpcomingFeature";
 import ButtonsPreview from "@/pages/ButtonsPreview";
+import CardsPreview from "@/pages/CardsPreview";
 import ChartPreview from "@/pages/ChartPreview";
 import { ComponentPage } from "@/pages/ComponentPage";
 import DashboardPage from "@/pages/DashboardPreview";
@@ -35,7 +36,7 @@ function AppRouter() {
               />
                 <Route
                 path="cards"
-                element={<ComponentPage title="Cards" />}
+                element={<ComponentPage title="Cards" preview={<CardsPreview/>} />}
               />
                 <Route
                 path="charts"

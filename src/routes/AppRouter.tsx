@@ -1,6 +1,7 @@
 import HomeLayout from "@/components/layout/HomeLayout";
 import UpcomingFeature from "@/components/UpcomingFeature";
 import ButtonsPreview from "@/pages/ButtonsPreview";
+import ChartPreview from "@/pages/ChartPreview";
 import { ComponentPage } from "@/pages/ComponentPage";
 import DashboardPage from "@/pages/DashboardPreview";
 import Feed from "@/pages/Feed";
@@ -37,7 +38,7 @@ function AppRouter() {
               />
                 <Route
                 path="charts"
-                element={<ComponentPage title="Charts" />}
+                element={<ComponentPage title="Charts"   preview={<ChartPreview/>}  />}
               />
                 <Route
                 path="modals"

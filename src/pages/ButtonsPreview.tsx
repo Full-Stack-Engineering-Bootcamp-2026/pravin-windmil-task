@@ -7,7 +7,7 @@ import { RiPencilFill } from "react-icons/ri";
 function ButtonsPreview() {
   return (
     <>
-      <div className="flex flex-col md:flex-row items-baseline pb-2 gap-2 ">
+      <div className="flex flex-wrap gap-2 pb-2">
         <Button className=" px-4 py-4" size={"lg"}>
           {" "}
           Larger Button
@@ -26,28 +26,42 @@ function ButtonsPreview() {
       <p className="text-muted-foreground  text-base font-normal">
         Apply w-full to any button to create a block level button.
       </p>
+         <div>
+        <h2 className="text-lg font-semibold mb-2">Variants</h2>
+        <div className="flex flex-wrap gap-2">
+          <Button variant="default">Default</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="outline">Outline</Button>
+          <Button variant="ghost">Ghost</Button>
+          <Button variant="link">Link</Button>
+          <Button variant="destructive">Destructive</Button>
+        </div>
+      </div>
 
       
-   <h1 className=" text-xl font-semibold py-2 ">Icons</h1>
-      <div className="flex flex-col md:flex-row items-center pb-2 gap-2   ">
-        <Button size={"lg"} className="flex items-center">
-          {" "}
-          <span>Icon Right</span> <FaHeart />{" "}
-        </Button>
+  
+       <div>
+        <h2 className="text-lg font-semibold mb-2">With Icons</h2>
+        <div className="flex flex-wrap gap-2">
 
-        <Button size={"lg"} className="flex items-center">
-          {" "}
-          <FaHeart /> <span>Icon Right</span>{" "}
-        </Button>
-         <Button  size={"lg"} className="flex items-center">
-          {" "}
-          <FaHeart />
-          
-        </Button>
-          <Button  size={"lg"} className="flex items-center rounded-full">
-         <RiPencilFill/>
+          <Button className="flex items-center gap-2">
+            Like <FaHeart />
           </Button>
-      </div>
+
+          <Button className="flex items-center gap-2">
+            <FaHeart /> Like
+          </Button>
+
+          <Button size="icon">
+            <FaHeart />
+          </Button>
+
+          <Button size="icon" variant="outline">
+            <RiPencilFill />
+          </Button>
+
+        </div>
+        </div>
     </>
   );
 }

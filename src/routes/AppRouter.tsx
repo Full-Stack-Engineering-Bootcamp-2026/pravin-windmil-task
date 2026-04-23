@@ -1,4 +1,5 @@
 import HomeLayout from "@/components/layout/HomeLayout";
+import Modal from "@/components/modal/Modal";
 import UpcomingFeature from "@/components/UpcomingFeature";
 import ButtonsPreview from "@/pages/ButtonsPreview";
 import CardsPreview from "@/pages/CardsPreview";
@@ -44,7 +45,7 @@ function AppRouter() {
               />
                 <Route
                 path="modals"
-                element={<ComponentPage title="Modals" />}
+                element={<ComponentPage title="Modals" preview = {<Modal/>} />}
               />
               <Route
                 path="tables"

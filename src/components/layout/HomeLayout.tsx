@@ -21,7 +21,7 @@ function HomeLayout() {
             <NavBar />
           </header>
 
-          <main className="flex-1 overflow-y-auto p-3 md:p-6 min-w-0">
+          <main className="flex-1 overflow-y-auto p-3 md:p-6 min-w-0 overflow-x-hidden">
             <Outlet />
           </main>
 

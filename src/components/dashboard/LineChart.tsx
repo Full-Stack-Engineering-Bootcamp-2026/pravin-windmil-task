@@ -15,7 +15,7 @@ ChartJS.register(
   LinearScale,
   PointElement,
   Tooltip,
-  Legend
+  Legend,
 );
 
 const data = {
@@ -35,7 +35,14 @@ const data = {
     },
   ],
 };
-
+const options = {
+  responsive: true,
+  maintainAspectRatio: false, // 👈 missing in your TrafficChart
+};
 export default function TrafficChart() {
-  return <Line data={data} />;
+  return (
+    <div className="w-full h-fulln min-h-[300px]">
+      <Line data={data} options={options} />
+    </div>
+  );
 }

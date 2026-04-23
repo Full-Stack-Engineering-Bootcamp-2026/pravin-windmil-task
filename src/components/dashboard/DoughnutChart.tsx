@@ -8,6 +8,10 @@ import {
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+};
 const data = {
   labels: ["Shirts", "Shoes", "Bags"],
   datasets: [
@@ -20,5 +24,9 @@ const data = {
 };
 
 export default function RevenueChart() {
-  return <Doughnut  data={data} />;
-}
+  return(   
+       <div className="w-full h-full min-h-75">
+      <Doughnut data={data} options={options} />
+    </div>
+
+  )}

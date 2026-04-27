@@ -5,41 +5,48 @@ import { FaSearch } from "react-icons/fa";
 import NotificationDropDown from "../NotificationDropDown";
 import { useSidebar } from "../ui/sidebar";
 import ProfileDropDown from "../ProfileDropDown";
-
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupInput,
+} from "../ui/input-group";
+import { SearchIcon } from "lucide-react";
+import SearchBar from "./SearchBar";
 
 export default function NavBar() {
-  const {state} = useSidebar()
+  const { state } = useSidebar();
   return (
-    <div className="flex items-center justify-between w-full ">
-      <Link to="/"   className={`  flex items-center gap-2`}>
-        <span className="text-xl  font-semibold whitespace-nowrap">
+    <div className="flex items-center justify-between w-full gap-2 ">
+      <Link to="/" className={`  flex items-center gap-2 hidden md:block`}>
+        <span className="text-xl  font-semibold  whitespace-nowrap">
           MBBlocks
         </span>
       </Link>
 
-      <div className="flex    bg-secondary/45 py-1   px-8 rounded-xl  border border-input justify-center items-center gap-2 group ">
-        <FaSearch className="text-gray-500 hidden md:block  group-focus-within:text-secondary-foreground transition-colors duration-200  " />
+      <SearchBar /> 
+
+
+      {/* <div className="flex    bg-secondary/45 py-1   px-8 rounded-xl  border border-input justify-center items-center gap-2 group "> */}
+      {/* <FaSearch className="text-gray-500 hidden md:block  group-focus-within:text-secondary-foreground transition-colors duration-200  " />
 
         <Input
           placeholder="Search"
           className="w-64 hidden md:block focus:outline-none  focus:ring-0 focus-visible:ring-0 border-0 bg-transparent "
-        />
-      </div>
+        /> */}
+      {/* </div> */}
 
       <div className="flex items-center gap-4">
         <ul className="hidden md:flex items-center gap-4">
           <li>
-
-                <ModeToggle />
+            <ModeToggle />
           </li>
           <li>
-            <NotificationDropDown/>
+            <NotificationDropDown />
           </li>
-           <li>
-            <ProfileDropDown/>
+          <li>
+            <ProfileDropDown />
           </li>
         </ul>
-    
       </div>
     </div>
   );

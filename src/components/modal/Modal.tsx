@@ -33,6 +33,8 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+
+import { VscSparkleFilled } from "react-icons/vsc";
 import { FaHandSparkles } from "react-icons/fa6";
 function Modal() {
   return (
@@ -92,21 +94,20 @@ function Modal() {
         </AlertDialogContent>
       </AlertDialog>
       <div>
-        <Card className=" bg-linear-to-r from-purple-200 via-violet-400 to-indigo-600 flex">
-          
-
-          <CardHeader className="text-primary-foreground w-full pt-6">
-            <CardTitle>Difference Between Dialog and AlertDialog:</CardTitle>
+        <Card className=" bg-gradient-to-r from-violet-300 to-violet-400   flex">
+          <CardHeader className="text-primary-foreground w-full pt-6 font-semibold text-base ">
+            <span>Dialog vs alert dialog</span> <VscSparkleFilled />
           </CardHeader>
           <CardContent className="">
             <div className="flex  items-center gap-2">
-                <FaHandSparkles size={90} color="black"/>
-                <span className="text-primary-foreground font-semibold text-shadow-md md:text-lg">In shadcn/ui, a Dialog is a general-purpose modal used for forms,
-            details, or non-critical interactions. An AlertDialog is used for
-            critical actions (like delete) where the user must explicitly
-            confirm or cancel before proceeding.</span>
+              <FaHandSparkles size={90} color="black" />
+              <span className="  text-primary-foreground  font-semibold text-shadow-md md:text-lg">
+                In shadcn/ui, a Dialog is a general-purpose modal used for
+                forms, details, or non-critical interactions. An AlertDialog is
+                used for critical actions (like delete) where the user must
+                explicitly confirm or cancel before proceeding.
+              </span>
             </div>
-            
           </CardContent>
         </Card>
       </div>
